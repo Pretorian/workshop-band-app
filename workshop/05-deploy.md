@@ -5,7 +5,7 @@
 
 ---
 
-A LoopBack app is simply a Node.js app. For our purposes, we will deploy our code to [Bluemix](https://bluemix.net), IBM's PaaS (platform as a service), but we could deploy it wherever Node.js is supported. If we were to deploy our app to a conventional server, we would need to make sure the tools were in place to keep our app running and able to handle any sort of load it may need to withstand. Fortunately, Bluemix handles all of that for us. And we can use their Cloud Foundry tools to configure and manage the deployment.
+A LoopBack app is simply a Node.js app. For our purposes, we will deploy our code to [IBM Cloud](https://bluemix.net), IBM's PaaS (platform as a service), but we could deploy it wherever Node.js is supported. If we were to deploy our app to a conventional server, we would need to make sure the tools were in place to keep our app running and able to handle any sort of load it may need to withstand. Fortunately, Bluemix handles all of that for us. And we can use their Cloud Foundry tools to configure and manage the deployment.
 
 ## Create Node.js Cloud Foundry app:
 

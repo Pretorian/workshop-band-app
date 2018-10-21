@@ -12,6 +12,37 @@
 
 
 ## Prerequisites
+### Creating an IBM Cloud Account and creating a Kubernetes cluster
+
+In this exercise, you'll create an account, attach a feature (promo) code, and create a Kubernetes cluster. A credit card is not required. This workshop will also work with Paid clusters, with a few differences pointed out along the way. Paid clusters come with support for Kubernetes Ingress via an external loadbalancer.
+
+#### Create an IBM Cloud Account
+
+#TODO
+1. Visit this [registration link](https://ibm.biz/BdYB5d) and sign up. Follow futher steps with email validation and so on.
+
+2. Get a feature code from this [spreadsheet](https://docs.google.com/spreadsheets/d/1WRJ0CuFRF8bHdUvo0S1EDrGgOrECSpL9gjVUdbOvxQw/edit?usp=sharing). Be sure to mark which one you took so your neighbor doesn't get an error!
+
+3. Click the "User Icon" in the upper right, then in the dropdown select "Profile & Account"
+
+4. On the left select "Billing"
+
+5. Scroll to the middle of the page where there is an 'Apply Code' button for feature codes. Apply the code. 
+
+
+#### Create a Kubernetes cluster
+
+1. Click the the upper left hamburger menu. Select "Containers". It should be near the top.
+
+2. Select "Create Cluster"
+
+3. If you see a region selection menu, select "US South"
+
+4. Select cluster type "Free"
+
+5. Name your cluster, and press "Create"
+
+You now have kicked off cluster creation. This will take a few minutes - in the meanwhile, you can start locally with LoopBack.
 
 #### Node.js and NPM
 
@@ -21,7 +52,7 @@ Check for Node:
 
 ```
 ✗ node --version
-v6.2.2
+v8.12.0
 ```
 
 This should yield a version number. A number greater than 4 should suffice. If you do not have Node installed, see [nodejs.org](https://nodejs.org) for more details on getting it for your platform.
@@ -30,7 +61,7 @@ To be safe, let's check NPM as well:
 
 ```
 ✗ npm --version
-4.2.0
+6.4.1
 ```
 
 This should also yield a version number; anything greater than 3 is preferable. If you do not have NPM, you likely do not have Node. If so, see above. If you have Node and not NPM, please reinstall Node.
