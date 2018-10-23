@@ -2,6 +2,8 @@
 
 You must already have a [cluster created](https://console.bluemix.net/docs/containers/container_index.html#container_index). Here are the steps to access your cluster.
 
+>Note: If your terminal is still running the LoopBack app from the previous step, you can open a new terminal or exit the LoopBack process (Ctrl/Cmd + C).
+
 ## Install IBM Cloud Kubernetes Service command line utilities
 
 1. Install the IBM Cloud [command line interface](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started).
@@ -26,7 +28,7 @@ ibmcloud plugin install container-service -r Bluemix
 
 4. To verify that the plug-in is installed properly, run `ibmcloud plugin list`. The Container Service plug-in is displayed in the results as `container-service`.
 
-5.  Initialize the Container Service plug-in and point the endpoint to your region. For example when prompted, enter `5` for `us-east`.
+5.  Initialize the Container Service plug-in and point the endpoint to `us-south` region.
 
 Example:
 
@@ -39,7 +41,7 @@ Choose a region:
 4. uk-south
 5. us-east
 6. us-south
-Enter a number> 5
+Enter a number> 6
 ```
 
 6. Install the Kubernetes CLI. Go to the [Kubernetes page](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-via-curl) to install the CLI and follow the steps.
@@ -61,7 +63,7 @@ b. Download the configuration file and certificates for your cluster using the `
 ibmcloud cs cluster-config <your_cluster_name>
 ```
 
-c. Copy and paste the output command from the previous step to set the `KUBECONFIG` environment variable and configure your CLI to run `kubectl` commands against your cluster.
+c. Copy and paste the output command from the previous step. This will set the `KUBECONFIG` environment variable and configure your CLI to run `kubectl` commands against your cluster.
 
 2.  Get basic information about your cluster and its worker nodes. This information can help you manage your cluster and troubleshoot issues.
 
@@ -92,6 +94,4 @@ b.  View services, deployments, and pods.
 kubectl get svc,deploy,po --all-namespaces
 ```
 
-## Deploy to Kubernetes
-
-#TODO
+**Next Step:** [Deploy to Kubernetes](06-deploy-kubernetes.md)

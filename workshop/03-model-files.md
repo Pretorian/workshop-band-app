@@ -57,7 +57,7 @@ The CLI created the `event.json` file based on the answers we gave to prompts in
 
 If we look at the configuration generated in this file, we see that it is all very readable and understandable.
 
-**Metadata and options:** These first few lines contain the name, our base model, whether id injection should be used (based on the type of data-source) and that we want to validate our model on upsert.
+**Metadata and options:** These first few lines contain the name, our base model, whether id injection should be used (based on the type of data-source) and that we want to validate our model on "upsert".
 
 **Properties:** The `properties` block is what was generated when we created our model based on the CLI prompts. If we decide later that we want a property to be required and a default value provided, we can just edit this file. It is very easy to get into the configuration and make our needed changes.
 

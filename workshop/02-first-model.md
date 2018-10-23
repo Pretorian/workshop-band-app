@@ -4,7 +4,7 @@
 
 ---
 
-LoopBack takes a model-driven approach to building out APIs. Based on our responses to the command line prompts, it will create a JSON file with our model schema and details.  For an introduction to LoopBack models see [LoopBack core concepts -  Models](http://loopback.io/doc/en/lb3/LoopBack-core-concepts.html#models) in the LoopBack documentation.
+LoopBack takes a model-driven approach to building out APIs. Based on our responses to the command line prompts, it will create a JSON file with our model schema and details.  For an introduction to LoopBack models see [LoopBack core concepts - Models](http://loopback.io/doc/en/lb3/LoopBack-core-concepts.html#models) in the LoopBack documentation.
 
 To invoke the generator, we type `lb model` and go through the list of prompts.
 
@@ -25,6 +25,8 @@ _Note: models should be singular. The application handles plural naturally, as w
 
 LoopBack generalizes backend services such as databases, REST APIs, SOAP web services, and storage services as data sources.
 A _connector_ enables LoopBack applications to use a given data source.  For more information, see [LoopBack core concepts - Data sources and connectors](http://loopback.io/doc/en/lb3/LoopBack-core-concepts.html#data-sources-and-connectors).
+
+Choose `db` for the data-source:
 
 ```
 ? Enter the model name: event
@@ -69,6 +71,8 @@ The base class for a model is the object that this model will extend from. There
 There may be reasons for keeping an endpoint private, but for the sake of this workshop, we will expose our REST API endpoints for public consumption. We will look at securing endpoints later in the workshop.
 
 ### Custom plural form
+
+Simply press enter to use the default for this field as well:
 
 ```
 ? Enter the model name: event

@@ -33,20 +33,20 @@ In this step, we are simply choosing the name of the directory that we are going
      info change the working directory to band-app
 ```
 
-_Note: If we want to name our directory something else, we can do so in this step. If we had already created a directory with the same name as our application---we are working from that directory---LoopBack will detect this and we could simply hit enter._
+_Note: If we want to name our directory something else, we can do so in this step. If we had already created a directory with the same name as our application - we are working from that directory - LoopBack will detect this and we could simply hit enter._
 
 
 ### Which version of LoopBack would you like to use?
 
 ```
 ? Which version of LoopBack would you like to use? (Use arrow keys)
-  2.x (long term support)
-❯ 3.x (current)
+❯ 3.x (Active Long Term Support)
+  2.x (Maintenance Long Term Support)
 ```
 
 We will choose the current version of LoopBack, 3.x.
 
-_Note: While LoopBack version 2 is still being supported, version 3 is the current version and in general you should use it for new applications._
+_Note: LoopBack 4 was recently announced (Oct 2018) and LoopBack 3.x is currently in Active Long Term Support. LoopBack 4 is a massive overhaul with many new capabilities. If you're interested, checkout the [announcement post](https://strongloop.com/strongblog/loopback-4-ga) and follow this repo and it will be updated for LoopBack 4_
 
 ### What kind of application do you have in mind?
 
@@ -66,7 +66,7 @@ We are presented with four options as starting points:
  a single remote method)
 - notes (A project containing a basic working example, including a memory database)
 
-We will choose the default option as it is useful to have a built-in User model to extend from when building our model for our users.
+We will choose the default option, `api-server`, as it is useful to have a built-in User model to extend from when building our model for our users.
 
 _Note: As alluded to above, it is best practice to extend base models such as `User` rather than using them directly. If we have multiple objects extending from a base model and we modify a base model, there may be adverse effects on all the models extending it._
 
@@ -114,12 +114,7 @@ Next steps:
 
   Change directory to your app
     $ cd band-app
-
-  Create a model in your app
-    $ lb model
-
-  Run the app
-    $ node .
+...
 ```
 
 At this point, our application is initialized and the terminal outputs some helpful next steps to continue development. Our next step is to jump in and create our first model-driven API endpoint.

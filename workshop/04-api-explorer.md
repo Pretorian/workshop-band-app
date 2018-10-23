@@ -95,5 +95,5 @@ Yay! Again, we get the `200` response and this time, the `GET` request returns a
 
 This is all working really well. Let's get it up on a server so we can take it to the next level.
 
-**Next Step:** [Deploy](05-deploy.md)
+**Next Step:** [Access your Kubernetes Cluster](05-access-kubernetes.md)
 

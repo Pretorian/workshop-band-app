@@ -6,47 +6,23 @@
 
 [LoopBack](http://loopback.io/) is an open-source framework to rapidly build RESTful APIs in Node.js.  It has a command line interface (CLI) tool that you can use to scaffold your application and build out your API layer based on your data (a model-driven approach). It isn't just fast and easy; it's also robust and extensible. It is built on top of Express, so it has widely-used and battle-tested foundation.
 
-**_LoopBack is so awesome, it is almost magical. Let me show you by building an API in 73 seconds:_**
+**_LoopBack is awesome - checkout this video where LoopBack is used to build fully functional APIs in just 5 minutes:_**
 
-[![Rapid APIs in LoopBack](assets/video.png)](https://youtu.be/iOMD27DjuO4 "Rapid APIs in LoopBack")
+[![Rapid APIs in LoopBack](assets/video.png)](https://youtu.be/Bm6u1f2PUag "Set Up a REST API in 5 Minutes with LoopBack")
 
 
 ## Prerequisites
 ### Creating an IBM Cloud Account and creating a Kubernetes cluster
 
-In this exercise, you'll create an account, attach a feature (promo) code, and create a Kubernetes cluster. A credit card is not required. This workshop will also work with Paid clusters, with a few differences pointed out along the way. Paid clusters come with support for Kubernetes Ingress via an external loadbalancer.
+In a later step of the lab, you'll be deploying your LoopBack application to a Kubernetes cluster on IBM Cloud. However, spinning up a cluster can take some time. To save some time, let's start by creating an IBM Cloud account, attaching a feature (promo) code, and spawning a Kubernetes cluster. A credit card is not required.
 
-#### Create an IBM Cloud Account
-
-#TODO
-1. Visit this [registration link](https://ibm.biz/BdYB5d) and sign up. Follow futher steps with email validation and so on.
-
-2. Get a feature code from this [spreadsheet](https://docs.google.com/spreadsheets/d/1WRJ0CuFRF8bHdUvo0S1EDrGgOrECSpL9gjVUdbOvxQw/edit?usp=sharing). Be sure to mark which one you took so your neighbor doesn't get an error!
-
-3. Click the "User Icon" in the upper right, then in the dropdown select "Profile & Account"
-
-4. On the left select "Billing"
-
-5. Scroll to the middle of the page where there is an 'Apply Code' button for feature codes. Apply the code. 
-
-
-#### Create a Kubernetes cluster
-
-1. Click the the upper left hamburger menu. Select "Containers". It should be near the top.
-
-2. Select "Create Cluster"
-
-3. If you see a region selection menu, select "US South"
-
-4. Select cluster type "Free"
-
-5. Name your cluster, and press "Create"
-
-You now have kicked off cluster creation. This will take a few minutes - in the meanwhile, you can start locally with LoopBack.
+Follow the instructions in the handout you should have received to create your cluster.
 
 #### Node.js and NPM
 
-As mentioned previously, we will need Node.js installed on our local machine for development. Included with Node.js is NPM, the Node Package Manager. We will use NPM to install LoopBack in a moment, but first lets see if we have Node and NPM:
+As mentioned previously, we will need Node.js installed on our local machine for development. [Download Node.js](https://nodejs.org/en/download/).
+
+Included with Node.js is NPM, the Node Package Manager. We will use NPM to install LoopBack in a moment, but first let's confirm that we have Node and NPM. Launch a terminal and run the following commands.
 
 Check for Node:
 
@@ -80,10 +56,10 @@ Now confirm it's installed:
 
 ```
 ✗ lb --version
-2.2.0 (generator-loopback@3.2.0 loopback-workspace@3.40.1)
+4.2.1 (generator-loopback@5.9.4 loopback-workspace@4.5.0)
 ```
 
-This should show a version number for the LoopBack CLI. Any version number should do.
+This should show a version number for the LoopBack CLI. 3 or greater for a version number should do.
 
 Type `lb --help` to show all sorts of helpful information:
 
