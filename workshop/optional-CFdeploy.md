@@ -9,17 +9,17 @@ A LoopBack app is simply a Node.js app. For our purposes, we will deploy our cod
 
 ## Create Node.js Cloud Foundry app:
 
-In this step, we need to go into the [Bluemix catalog](https://console.ng.bluemix.net/catalog/) and from the Cloud Foundry section we will choose to create a Node.js Runtime App:
+In this step, we need to go into the [IBM Cloud catalog](https://console.ng.bluemix.net/catalog/) and from the Cloud Foundry section we will choose to create a Node.js Runtime App:
 
-![Bluemix - Cloud Foundry Apps](assets/bluemix-catalog-cloud-foundry-apps.png)
+![IBM Cloud - Cloud Foundry Apps](assets/bluemix-catalog-cloud-foundry-apps.png)
 
 ### Create the Node.js app
 
 Choosing the SDK for Node.js takes us to a page where we can name our application as well as choose the Bluemix route to access our app:
 
-![Bluemix - Create Node.js app](assets/bluemix-create-node-starter.png)
+![IBM Cloud - Create Node.js app](assets/bluemix-create-node-starter.png)
 
-*Note: take notice of the org and space you created this app in on Bluemix. It is likely you only have one of each, but it is not uncommon to have more than one of one or the other. Which org/space you are currently in is where the app will be created.*
+*Note: take notice of the org and space you created this app in on IBM Cloud. It is likely you only have one of each, but it is not uncommon to have more than one of one or the other. Which org/space you are currently in is where the app will be created.*
 
 The next page presented to us after creating our Node.js app shows the app starting up. On this page, we will also see some instructions for using a sample app and getting started. We are going to skip that in favor of the following steps:
 
@@ -95,7 +95,7 @@ Looks like we were successful.
 
 ### Push our code `cf push`
 
-We can push our code to Bluemix by running the `cf push` command. Doing so will use our `manifest.yml` file and the settings we have just chosen to deploy our app in the cloud.
+We can push our code to IBM Cloud by running the `cf push` command. Doing so will use our `manifest.yml` file and the settings we have just chosen to deploy our app in the cloud.
 
 ```bash
 ➜  band-app git:(master) ✗ cf push
@@ -170,6 +170,6 @@ name       requested state   instances   memory   disk   urls
 band-app   started           1/1         256M     1G     Band-App.mybluemix.net
 ```
 
-If we go to our [Band App on Bluemix](https://band-app.bluemix.net), we will see the status output that is the default for a LoopBack app. And if we view the [LoopBack Explorer for our API](https://band-app.bluemix.net/explorer)(`/explorer`), we should see the familiar interface.
+If we go to our [Band App on IBM Cloud](https://band-app.bluemix.net), we will see the status output that is the default for a LoopBack app. And if we view the [LoopBack Explorer for our API](https://band-app.bluemix.net/explorer)(`/explorer`), we should see the familiar interface.
 
 **Next Step:** [Connect a datasource](06-datasource.md)

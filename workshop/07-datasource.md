@@ -10,17 +10,17 @@ In this step, we are going to instantiate a Cloudant DB and connect it to our ap
 
 Let's jump into the [IBM Cloud catalog](https://console.ng.bluemix.net/catalog/), filter by Databases, find Cloudant and create the service:
 
-![IBM Cloud - Data Apps](assets/bluemix-catalog-data.png)
+![IBM Cloud - Data Apps](assets/ibmcloud-catalog-data.png)
 
 ### Create your service
 
 Once we choose the Cloudant DB service, we are given the option to customize the service. Choose the options as seen in the screenshot below:
 
-![IBM Cloud - Create Cloudant service](assets/cloudant-details-unbound.png)
+![IBM Cloud - Create Cloudant service](assets/cloudant-details-create.png)
 
 Clicking create takes us to our Cloudant service instance page:
 
-![IBM Cloud - Cloudant page](assets/cloudant-bm-dash.png)
+![IBM Cloud - Cloudant page](assets/cloudant-dash.png)
 
 ### Create our database
 
@@ -30,7 +30,7 @@ The next thing we need to do is create the database in our Cloudant service inst
 
 In the dashboard (shown above), we need to click the Databases option in the left sidebar and then near the top right, click Create Database. We will name the database `band-app`.
 
-Lastly, we need to get the credentials for our Cloudant service -- these credentials are needed in the next step. To do so, we will go back to our IBM Cloud dashboard and from the Cloudant instance overview page, click the 'Service Credentials' tab on the left and click 'New Credential'. Choose a name, and leave the other defaults. Then, press "View Credentials". You'll see your private credentials to access the database - we only need the "url" field.
+Lastly, we need to get the credentials for our Cloudant service -- these credentials are needed in the next step. To do so, we will go back to our IBM Cloud dashboard and from the Cloudant instance overview page, click the 'Service Credentials' tab on the left and click 'New Credential'. Choose a name, and leave the other defaults and create the credential set. Then press "View Credentials". You'll see your private credentials to access the database - we only need the "url" field.
 
 ```
 {
@@ -46,7 +46,7 @@ Lastly, we need to get the credentials for our Cloudant service -- these credent
 }
 ```
 
-Make a note of the contents of the URL field - `https://***:***@***-bluemix.cloudant.com`.
+Make a note of the contents of the `url` field - `https://***:***@***-bluemix.cloudant.com`.
 
 ## Use Cloudant in our app
 

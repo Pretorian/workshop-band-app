@@ -34,7 +34,6 @@ docker push [your_docker_username]/band-app:v1
 ```
 
 ### Run your LoopBack application locally
-#TODO
 
 Run the following command to launch your Docker-ized LoopBack application on your local machine:
 
@@ -83,7 +82,7 @@ spec:
 
 Update `<your_docker_username>` with your Docker username.
 
-This file describes two major Kubernetes resources - a deployment and service. A deployment tells Kubernetes to pull the container specified next to `image:` from DockerHub, and then starts it and verifies that the state of the application matches the parameters described. For example, since we chose 3 replicas, Kubernetes will always ensure that there are 3 copies of our LoopBack application running. The second part of the file describes the service - a service exposes the Kubernetes application for external access. Namely, we are exposing the internal port 3000 on the external node port 32000. This is important for the next step where we learn how to access the application.
+This file describes two major Kubernetes resources - a deployment and service. A deployment tells Kubernetes to pull the container specified next to `image:` from DockerHub, and then starts it and verifies that the state of the application matches the parameters described. For example, since we chose 3 replicas Kubernetes will always ensure that there are 3 copies of our LoopBack application running. The second part of the file describes the service - a service exposes the Kubernetes application for external access. Namely, we are exposing the internal port 3000 on the external node port 32000. This is important for the next step where we learn how to access the application.
 
 ### Deploy your application
 
@@ -93,13 +92,13 @@ Run the following command to deploy the application to Kubernetes:
 kubectl apply -f k8s-deploy.yml
 ```
 
-> Note: In the previous exercise, you exported the `KUBECONFIG` env var. If you opened a new terminal, this variable may be lost, which prevents you from being able to access your cluster (or deploy to it). If the previous step failed, try verifying that the `KUBECONFIG` is set. Run `echo $KUBECONFIG`. If it's empty, re-run the steps from the previous exercise - namely the `ibmcloud cs cluster-config <cluster_name>` command.
+> Note: In the previous exercise, you exported the `KUBECONFIG` env var. If you opened a new terminal, this variable may be lost, which prevents you from being able to access your cluster (or deploy to it). If this command failed, try verifying that the `KUBECONFIG` is set. Run `echo $KUBECONFIG`. If it's empty, re-run the steps from the previous exercise - namely the `ibmcloud cs cluster-config <cluster_name>` command.
 
 ### Access your LoopBack application in Kubernetes
 
-Run `bx cs workers mycluster` and locate the `Public IP`. This IP is used to access the LoopBack application. Open a browser and navigate to `<Public_IP>:32000` to access your application. Note that we append the NodePort that we described in the deployment manifest above.
+Run `ibmcloud cs workers mycluster` and locate the `Public IP`. This IP is used to access the LoopBack application. Open a browser and navigate to `<Public_IP>:32000` to access your application. Note that we append the NodePort that we described in the deployment manifest above.
 
-That's it! You've Docker-ized your application and deployed it to a running Kubernetes cluster in IBM Cloud. Note that these steps are almost identical to Kubernetes deployments running anywhere, whether it is on a different cloud or on local hardware. The one unique IBM-specific step is downloading the cluster-configuration for Kubernetes.
+That's it! You've Docker-ized your application and deployed it to a running Kubernetes cluster in IBM Cloud. Note that these steps are almost identical to Kubernetes deployments running anywhere, whether it is on a different cloud or on local hardware. The one unique IBM-specific step is downloading the cluster-configuration for Kubernetes. Every cloud provider has their own process for downloading this config.
 
 ## Done!
 

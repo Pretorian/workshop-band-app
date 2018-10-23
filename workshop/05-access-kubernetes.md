@@ -8,16 +8,16 @@ You must already have a [cluster created](https://console.bluemix.net/docs/conta
 
 1. Install the IBM Cloud [command line interface](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started).
 
-2.  Log in to the IBM Cloud CLI. If you have a federated account, include the `[--sso]` flag.
+2.  Log in to the IBM Cloud CLI with your IBM ID.
+
+```shell
+ibmcloud login
+```
+
+If you have a federated account, include the `[--sso]` flag. If you have an api key, use the `--apikey` flag.
 
 ```shell
 ibmcloud login [--sso]
-```
-
-or if you have an api key, use:
-
-```shell
-ibmcloud login --apikey <apikey>
 ```
 
 3.  Install the IBM Cloud Kubernetes Service plug-in.
@@ -50,6 +50,8 @@ Enter a number> 6
 Learn how to set the context to work with your cluster by using the `kubectl` CLI, access the Kubernetes dashboard, and gather basic information about your cluster.
 
 1.  Set the context for your cluster in your CLI. Every time you log in to the IBM Cloud Kubernetes Service CLI to work with the cluster, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in IBM Cloud.
+
+>Note: If you feel comfortable modifying your `.bashrc` file (running a script every time you launch your terminal), you could save the `KUBECONFIG` export step explained below. This allows you to avoid having to run this command every time you launch a new terminal.
 
 a. List the available clusters.
 
