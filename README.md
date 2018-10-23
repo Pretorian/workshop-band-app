@@ -21,6 +21,6 @@ For example, we will start out cataloging shows/performances. We then abstract o
 
 ## Get started
 
-Begin with the [Getting Started](workshop/00-getting-started.md) page to learn more about LoopBack and how to start the workshop.
+**Begin with the [Getting Started](workshop/00-getting-started.md)** page to start the workshop.
 
-**Code repository:** [https://github.com/StrongLoop-Evangelists/band-app](https://github.com/StrongLoop-Evangelists/band-app)
+Application Source Code Repo: [https://github.com/StrongLoop-Evangelists/band-app](https://github.com/StrongLoop-Evangelists/band-app)
