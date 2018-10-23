@@ -6,7 +6,7 @@ You must already have a [cluster created](https://console.bluemix.net/docs/conta
 
 ## Install IBM Cloud Kubernetes Service command line utilities
 
-1. Install the IBM Cloud [command line interface](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started).
+1. Install the IBM Cloud [command line interface](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
 
 2.  Log in to the IBM Cloud CLI with your IBM ID.
 

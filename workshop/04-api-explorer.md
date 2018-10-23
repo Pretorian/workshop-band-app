@@ -97,3 +97,4 @@ This is all working really well. Let's get it up on a server so we can take it t
 
 **Next Step:** [Access your Kubernetes Cluster](05-access-kubernetes.md)
 
+If you were unable to create a Kubernetes cluster, use the [CloudFoundry approach](10-optional-CF-deploy.md).

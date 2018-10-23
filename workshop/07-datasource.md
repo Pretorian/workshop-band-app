@@ -68,7 +68,7 @@ Then we will run `lb datasource` to setup Cloudant for our app. Enter `cloudant`
 ? Select the connector for cloudantDB: IBM Cloudant DB (supported by StrongLoop)
 Connector-specific configuration:
 ? Connection String url to override other settings (eg: https://username:password@host): https://your-username-here:your-password-here@your-host-here
-? database: 
+? database: band-app
 ? username:
 ? password:
 ? Specify the model name to document mapping, defaults to `loopback__model__name`:
